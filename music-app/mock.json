@@ -44,7 +44,7 @@
     },
     {
       "id": "4",
-      "title": "(I Can't Get No) Satisfaction",
+      "title": "I Can't Get No Satisfaction",
       "poster": "http://dummyimage.com/400x600.png/cc0000/ffffff",
       "genre": [
         "Rock",
@@ -153,16 +153,6 @@
       "duration": 502,
       "rating": 8.39,
       "artist": 7
-    },
-    {
-      "id": 0,
-      "title": "Test Song",
-      "artist": "2",
-      "genre": "Pop , Rock , Alternative",
-      "poster": "",
-      "year": 0,
-      "duration": 0,
-      "rating": 0
     }
   ],
   "artists": [

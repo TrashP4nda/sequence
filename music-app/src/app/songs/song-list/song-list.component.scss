@@ -1,0 +1,46 @@
+.song-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .song-item {
+    display: flex;
+    justify-content: center;
+    /* height: 600px; // optional if you need a fixed height */
+  }
+  
+  .song-container {
+    width: 100%;
+    max-width: 400px;
+    /* height: 600px; // optional if you need a fixed height */
+  }
+  
+  .song-card {
+    width: 100%;
+    padding: 16px;
+  
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+  }
+  
+  /* Make sure text is visible */
+  .mat-card-title,
+  .mat-card-subtitle {
+    color: #000;
+  }
+  
+  mat-chip-list {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .tag {
+    background-color: #e0e0e0;
+    color: #333;
+    font-size: 12px;
+  }
+  

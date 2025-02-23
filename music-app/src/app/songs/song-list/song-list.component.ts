@@ -1,16 +1,21 @@
-
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
-import { Song, SongService } from '../../services/song.service';
 import { CommonModule } from '@angular/common';
-import { MatListModule } from '@angular/material/list';
+import { MatCardModule } from '@angular/material/card';
+import { MatChipsModule } from '@angular/material/chips';
+import { Song, SongService } from '../../services/song.service';
 
 @Component({
   standalone: true,
   selector: 'app-song-list',
   templateUrl: './song-list.component.html',
   styleUrls: ['./song-list.component.scss'],
-  imports: [CommonModule, MatListModule, RouterModule]
+  imports: [
+    CommonModule,
+    RouterModule,
+    MatCardModule,
+    MatChipsModule
+  ]
 })
 export class SongListComponent implements OnInit {
   songs: Song[] = [];
@@ -22,8 +27,8 @@ export class SongListComponent implements OnInit {
 
   ngOnInit(): void {
     this.songService.getSongs().subscribe({
-      next: (data) => this.songs = data,
-      error: (err) => console.error('Error fetching songs', err)
+      next: (data) => (this.songs = data),
+      error: (err) => console.error('Error fetching songs', err),
     });
   }
 
