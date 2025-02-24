@@ -1,0 +1,27 @@
+<mat-toolbar color="primary">
+  <span class="app-title">Menu</span>
+  
+  <!-- Spacer -->
+  <span class="flex-spacer"></span>
+  
+  <!-- Desktop Navigation: shown on larger screens -->
+  <div class="desktop-nav hide-on-mobile">
+    <button mat-button [routerLink]="['/songs']">Songs</button>
+    <button mat-button [routerLink]="['/artists']">Artists</button>
+    <button mat-button [routerLink]="['/companies']">Companies</button>
+  </div>
+  
+  <!-- Mobile Navigation: hamburger icon shown on smaller screens -->
+  <div class="mobile-nav hide-on-desktop">
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>
+
+<!-- Menu for mobile navigation -->
+<mat-menu #menu="matMenu">
+  <button mat-menu-item [routerLink]="['/songs']">Songs</button>
+  <button mat-menu-item [routerLink]="['/artists']">Artists</button>
+  <button mat-menu-item [routerLink]="['/companies']">Companies</button>
+</mat-menu>

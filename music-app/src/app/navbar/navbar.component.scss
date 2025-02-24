@@ -1,0 +1,29 @@
+/* Base styling for the app title and spacer */
+.app-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.flex-spacer {
+  flex: 1 1 auto;
+}
+
+/* Hide both by default */
+.hide-on-mobile,
+.hide-on-desktop {
+  display: none;
+}
+
+/* Show desktop navigation on screens wider than 600px */
+@media (min-width: 600px) {
+  .hide-on-mobile {
+    display: inline-flex;
+  }
+}
+
+/* Show mobile navigation on screens narrower than 600px */
+@media (max-width: 599px) {
+  .hide-on-desktop {
+    display: inline-flex;
+  }
+}

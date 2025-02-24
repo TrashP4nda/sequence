@@ -1,0 +1,113 @@
+/* Global reset for predictable sizing */
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Container for all artists */
+  .artist-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+  }
+  
+  /* Each artist item */
+  .artist-item {
+    flex: 1 1 25%;
+    max-width: 25%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    .artist-item {
+      flex: 1 1 33.33%;
+      max-width: 33.33%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .artist-item {
+      flex: 1 1 50%;
+      max-width: 50%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .artist-item {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  }
+  
+  /* artist card styling with smooth hover effect */
+  .artist-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 16px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .artist-card:hover {
+    background-color: lightblue;
+  }
+  
+  /* Container for artist content */
+  .artist-container {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  /* Image styling */
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* artist title styling */
+  .artist-title {
+    min-height: 60px; /* Adjust based on expected title height */
+  }
+  
+  /* Chip list styling */
+  mat-chip-list {
+    display: flex;
+    gap: 8px;
+  }
+  
+  /* Tag styling */
+  .tag {
+    background-color: #e0e0e0;
+    color: #333;
+    font-size: 12px;
+  }
+  
+  /* Card header styling */
+  .mat-card-header {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60px; /* Adjust as needed */
+  }
+  
+  .floating-btn {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    z-index: 1000;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .floating-btn:hover{
+    background-color: lightblue;
+  }
+  
