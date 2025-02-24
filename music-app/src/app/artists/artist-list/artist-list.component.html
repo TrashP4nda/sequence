@@ -1,0 +1,34 @@
+
+<!-- Main container for the artist list -->
+<div class="artist-list">
+  <!-- Loop through artists -->
+  <div
+    class="artist-item"
+    *ngFor="let artist of artists"
+    
+  >
+    <div class="artist-container">
+      <mat-card class="artist-card">
+        <mat-card-header>
+          <mat-card-title class="artist-title">{{ artist.name}}</mat-card-title>
+        </mat-card-header>
+
+        <!-- Poster image -->
+        <img
+          mat-card-image
+          [src]="artist.img"
+          alt="{{ artist.name }}"
+        />
+
+        
+        <mat-card-content>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
+
+
+<button mat-fab color="primary" class="floating-btn" [routerLink]="['/artists/new']">
+  <mat-icon>add</mat-icon>
+</button>

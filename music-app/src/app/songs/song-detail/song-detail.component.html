@@ -1,0 +1,17 @@
+<h2>Song Detail</h2>
+
+<form (ngSubmit)="saveSong()">
+  <label>Title:</label>
+  <input type="text" [(ngModel)]="song.title" name="title" required />
+  <br><br>
+
+  <label>Artist:</label>
+  <input type="text" [(ngModel)]="song.artist" name="artist" required />
+  <br><br>
+
+  <label>Genre (comma separated):</label>
+  <input type="text" [(ngModel)]="song.genre" name="genre" />
+  <br><br>
+
+  <button type="submit" mat-button color="primary">Save</button>
+</form>

@@ -1,0 +1,42 @@
+<h1>Songs</h1>
+<button mat-button color="primary" [routerLink]="['/songs/new']">Add New Song</button>
+
+<!-- Main container for the song list -->
+<div class="song-list">
+  <!-- Loop through songs -->
+  <div
+    class="song-item"
+    *ngFor="let song of songs"
+    (click)="goToDetail(song.id)"
+  >
+    <div class="song-container">
+      <mat-card class="song-card">
+        <mat-card-header>
+          <mat-card-title>{{ song.title }} ({{ song.artistname }})</mat-card-title>
+
+        </mat-card-header>
+
+        <!-- Poster image -->
+        <img
+          mat-card-image
+          [src]="song.poster"
+          alt="{{ song.title }}"
+        />
+
+        <!-- Tags -->
+        <mat-card-content>
+          <div class="tag-container">
+            <mat-chip-set>
+              <mat-chip
+                *ngFor="let tag of song.genre"
+                class="tag"
+              >
+                #{{ tag }}
+              </mat-chip>
+            </mat-chip-set>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
