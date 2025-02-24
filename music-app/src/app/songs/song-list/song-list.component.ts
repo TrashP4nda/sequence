@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
 import { Song, SongService } from '../../services/song.service';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   standalone: true,
@@ -14,7 +15,8 @@ import { Song, SongService } from '../../services/song.service';
     CommonModule,
     RouterModule,
     MatCardModule,
-    MatChipsModule
+    MatChipsModule,
+    MatIconModule
   ]
 })
 export class SongListComponent implements OnInit {
