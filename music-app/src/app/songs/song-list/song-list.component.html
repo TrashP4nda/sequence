@@ -1,5 +1,3 @@
-<h1>Songs</h1>
-<button mat-button color="primary" [routerLink]="['/songs/new']">Add New Song</button>
 
 <!-- Main container for the song list -->
 <div class="song-list">
@@ -12,8 +10,7 @@
     <div class="song-container">
       <mat-card class="song-card">
         <mat-card-header>
-          <mat-card-title>{{ song.title }} ({{ song.artistname }})</mat-card-title>
-
+          <mat-card-title class="song-title">{{ song.title }} ({{ song.artistname }})</mat-card-title>
         </mat-card-header>
 
         <!-- Poster image -->
@@ -40,3 +37,8 @@
     </div>
   </div>
 </div>
+
+
+<button mat-fab color="primary" class="floating-btn" [routerLink]="['/songs/new']">
+  <mat-icon>add</mat-icon>
+</button>

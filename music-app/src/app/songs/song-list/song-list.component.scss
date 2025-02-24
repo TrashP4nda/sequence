@@ -1,46 +1,112 @@
+/* Global reset for predictable sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Container for all songs */
 .song-list {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+/* Each song item */
+.song-item {
+  flex: 1 1 25%;
+  max-width: 25%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
   .song-item {
-    display: flex;
-    justify-content: center;
-    /* height: 600px; // optional if you need a fixed height */
+    flex: 1 1 33.33%;
+    max-width: 33.33%;
   }
-  
-  .song-container {
-    width: 100%;
-    max-width: 400px;
-    /* height: 600px; // optional if you need a fixed height */
+}
+
+@media (max-width: 768px) {
+  .song-item {
+    flex: 1 1 50%;
+    max-width: 50%;
   }
-  
-  .song-card {
-    width: 100%;
-    padding: 16px;
-  
-    img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-    }
+}
+
+@media (max-width: 480px) {
+  .song-item {
+    flex: 1 1 100%;
+    max-width: 100%;
   }
-  
-  /* Make sure text is visible */
-  .mat-card-title,
-  .mat-card-subtitle {
-    color: #000;
-  }
-  
-  mat-chip-list {
-    display: flex;
-    gap: 8px;
-  }
-  
-  .tag {
-    background-color: #e0e0e0;
-    color: #333;
-    font-size: 12px;
-  }
-  
+}
+
+/* Song card styling with smooth hover effect */
+.song-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 16px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.song-card:hover {
+  background-color: lightblue;
+}
+
+/* Container for song content */
+.song-container {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Image styling */
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Song title styling */
+.song-title {
+  min-height: 60px; /* Adjust based on expected title height */
+}
+
+/* Chip list styling */
+mat-chip-list {
+  display: flex;
+  gap: 8px;
+}
+
+/* Tag styling */
+.tag {
+  background-color: #e0e0e0;
+  color: #333;
+  font-size: 12px;
+}
+
+/* Card header styling */
+.mat-card-header {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60px; /* Adjust as needed */
+}
+
+.floating-btn {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 1000;
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.floating-btn:hover{
+  background-color: lightblue;
+}
